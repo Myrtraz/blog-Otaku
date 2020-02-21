@@ -6,7 +6,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h1></h1>
+				<a href="{{route('admin.index')}}" class="text-white text-decoration-none h2"><i class="fa fa-arrow-left"></i></a>
+				<h1 class="text-white font-weight-bold text-center">Gallery</h1>
 			</div>
 		</div>
 	</div>

@@ -26,11 +26,15 @@
 			<div class="col">
 				<form action="{{route('login.store')}}" method="post">
 					@csrf
-					<label class="h2 text-white font-weight-bold">Email Address</label>
-					<input type="email" class="form-control" name="email" placeholder="Correo">
-					<label class="h2 text-white font-weight-bold">Password</label>
-					<input type="password" class="form-control" name="password" placeholder="Contraseña">
-					<div class="mb-3"></div>
+					<h1 class="text-center text-white font-weight-bold">Administrador</h1>
+					<div class="mb-3">
+						<label class="h2 text-white font-weight-bold">Email Address</label>
+						<input type="email" class="form-control" name="email" placeholder="Correo">
+					</div>
+					<div class="mb-3">
+						<label class="h2 text-white font-weight-bold">Password</label>
+						<input type="password" class="form-control" name="password" placeholder="Contraseña">
+					</div>
 					<button type="submit" class="form-control btn-success float-right">Ingresar</button>
 				</form>
 			</div>
