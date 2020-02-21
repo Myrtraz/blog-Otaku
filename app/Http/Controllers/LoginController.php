@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use Auth;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -34,14 +36,14 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(LoginRequest $request)
-    {
+    public function store(LoginRequest $request) {
+
         if (! Auth::attempt($request->only(['email', 'password']))) {
             return back()->withErrors(['Invalid Credentials']);
         }
 
-        return redirect()->route('admin.index');
-    }
+    return redirect()->route('admin.index');
+}
 
     /**
      * Display the specified resource.

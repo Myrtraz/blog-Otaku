@@ -7,6 +7,10 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="text-center text-white">Panel de Control</h1>
+				<form action="{{route('login.store')}}" method="post">
+					@csrf
+					<button type="submit" class="btn btn-danger font-weight-bold">Cerrar Sesion</button>
+				</form>
 				<a href="{{route('photo.index')}}" class="text-white text-decoration-none float-right h2"><i class="fa fa-arrow-right"></i></a>
 			</div>
 		</div>

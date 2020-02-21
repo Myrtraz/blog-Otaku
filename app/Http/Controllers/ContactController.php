@@ -45,7 +45,7 @@ class ContactController extends Controller
 
         Mail::to('marcoestaba39@gmail.com')->queue(new MessageReceived($message));
 
-        return 'Mensaje Enviado';
+        return redirect()->to('/contact');
     }
 
     /**
